@@ -1,0 +1,13 @@
+
+function output = filter_flags( flag_counts)
+
+[row , column] = size(flag_counts);
+output  = []; count = 1;
+for i = 1:column
+if flag_counts(1,i) > 0 | flag_counts(3,i) > 0 | flag_counts(4, i) > 0 | flag_counts(5 , i) > 0
+continue
+else
+output(count) = i;
+count = count+1;
+end
+end
